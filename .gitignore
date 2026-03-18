@@ -1,2 +1,6 @@
-awen-sparklab.png
-klee727-home.png
+﻿node_modules/
+.pnpm-store/
+.superpowers/
+*.png
+*.jpg
+*.jpeg
