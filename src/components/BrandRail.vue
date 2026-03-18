@@ -67,10 +67,10 @@ onUnmounted(() => {
         <span></span>
         <span></span>
       </div>
-      <p class="eyebrow">SparkLab / Launch Deck</p>
-      <div class="brand-title">AWEN<br />SparkLab</div>
+      <p class="eyebrow">Klee / Character Special</p>
+      <div class="brand-title">可莉<br />Klee</div>
       <p class="brand-copy">
-        把主题站的热度、实验室的结构和专题页的节奏，组装成一个更适合持续扩展的原创首页。
+        西风骑士团的火花骑士。她总能把冒险、爆弹和笑声一起带进蒙德，也总会顺手把麻烦一起带回来。
       </p>
     </div>
 
@@ -87,25 +87,25 @@ onUnmounted(() => {
 
     <div class="rail-card rail-card-primary reveal is-visible">
       <div class="rail-card-head">
-        <p class="rail-label">今日燃点</p>
+        <p class="rail-label">角色状态</p>
         <span class="status-pill">Live</span>
       </div>
       <strong>{{ sparkValue }}%</strong>
       <p class="rail-text">
-        当前版本已经具备首页叙事、模块入口和时间轴骨架，适合继续接入图集、语音或活动专题。
+        活泼、冒失、热情、危险又可爱。可莉的角色魅力从来不只在战斗表现，更在她那种一开口就能点亮页面的存在感。
       </p>
     </div>
 
     <div class="rail-card reveal is-visible">
       <div class="rail-card-head">
-        <p class="rail-label">运行模式</p>
-        <span class="mini-chip">C + A</span>
+        <p class="rail-label">角色标签</p>
+        <span class="mini-chip">Pyro</span>
       </div>
       <ul class="rail-list">
-        <li>实验室结构</li>
-        <li>专题站首屏</li>
-        <li>暖色爆点系统</li>
-        <li>移动端优先重排</li>
+        <li>西风骑士团 · 火花骑士</li>
+        <li>火元素 · 法器</li>
+        <li>嘟嘟可与爆弹日常</li>
+        <li>禁闭室常客</li>
       </ul>
     </div>
   </aside>

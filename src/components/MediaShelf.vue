@@ -1,22 +1,22 @@
 ﻿<script setup>
 const mediaCards = [
   {
-    title: '图集仓 · Spark Gallery',
+    title: '图集精选 · Spark Gallery',
     tag: 'Gallery',
-    copy: '把角色图、活动图、截图和视觉素材装进统一卡片系统，后面可以继续接筛选和大图查看。',
-    meta: ['12 组画面', '暖色封面', '专题封装'],
+    copy: '收纳可莉的角色立绘、活动插图、夏日场景和轻松冒险气氛，让整站随时都能往图集页扩展。',
+    meta: ['角色立绘', '夏日活动', '暖色画面'],
   },
   {
-    title: '语音仓 · Voice Capsule',
+    title: '语音精选 · Voice Capsule',
     tag: 'Audio',
-    copy: '音频模块将来可以直接接播放器、语音列表和短语标签，不需要再重做首页结构。',
-    meta: ['播放器入口', '角色短语', '状态标签'],
+    copy: '把可莉最有代表性的台词、招呼、冒险语气和嘟嘟可相关短句放进一个更轻松的语音入口里。',
+    meta: ['角色台词', '轻快语气', '播放器入口'],
   },
   {
-    title: '活动仓 · Event Relay',
+    title: '活动记忆 · Event Relay',
     tag: 'Event',
-    copy: '适合把限时活动、专题企划或联动入口做成高饱和爆点卡，和常规内容层级分开。',
-    meta: ['爆点入口', '短期专题', '时间节点'],
+    copy: '围绕可莉出现过的重要活动与节日记忆做专题卡，既能承接剧情回忆，也能维持整个页面的热闹感。',
+    meta: ['海岛记忆', '活动节点', '专题延展'],
   },
 ]
 </script>
@@ -25,11 +25,11 @@ const mediaCards = [
   <section class="media panel reveal" id="media">
     <div class="panel-heading">
       <div>
-        <p class="section-kicker">Content Warehouse</p>
-        <h2>先补一个真实模块区，让这个首页不只是概念稿。</h2>
+        <p class="section-kicker">Gallery & Voice</p>
+        <h2>把可莉最适合被反复回看的内容收进同一层入口。</h2>
       </div>
       <p class="panel-copy">
-        这三个模块是后续最适合先落地的内容方向，也已经按照 Vue 组件结构准备好了扩展位。
+        图集、语音和活动记忆是可莉专题站最自然的三块内容，也是最适合继续扩成独立页面的部分。
       </p>
     </div>
 

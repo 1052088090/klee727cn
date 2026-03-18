@@ -8,11 +8,11 @@ import TimelineSection from './components/TimelineSection.vue'
 import FieldRules from './components/FieldRules.vue'
 
 const navItems = [
-  { id: 'hero', label: '启动页' },
-  { id: 'modules', label: '模块区' },
-  { id: 'media', label: '内容仓' },
-  { id: 'timeline', label: '时间线' },
-  { id: 'notes', label: '设计规则' },
+  { id: 'hero', label: '角色首页' },
+  { id: 'modules', label: '角色资料' },
+  { id: 'media', label: '图集语音' },
+  { id: 'timeline', label: '活动记忆' },
+  { id: 'notes', label: '可莉印象' },
 ]
 
 useReveal()

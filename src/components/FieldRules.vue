@@ -2,30 +2,30 @@
   <section class="notes panel reveal" id="notes">
     <div class="panel-heading">
       <div>
-        <p class="section-kicker">Field Rules</p>
-        <h2>这套视觉系统现在的 4 条核心规则。</h2>
+        <p class="section-kicker">Klee Impressions</p>
+        <h2>这个角色专题站现在围绕可莉保留的 4 个核心印象。</h2>
       </div>
       <p class="panel-copy">
-        它们保证页面即使后面不断加内容，也不会退回普通模板站的平庸样子。
+        它们共同决定了这个页面为什么一眼看上去就是可莉，而不是普通的角色资料板。
       </p>
     </div>
 
     <div class="notes-grid">
       <article class="note-card">
-        <h3>高饱和只打关键点</h3>
-        <p>红和橙只服务主标题、按钮、状态值和重要节点，不让整页失去层次。</p>
+        <h3>热闹但不吵闹</h3>
+        <p>可莉的气氛是明亮、轻快、带一点危险感，但不能把页面做成纯粹的混乱爆炸秀。</p>
       </article>
       <article class="note-card">
-        <h3>卡片必须有主次</h3>
-        <p>不是每块都一样重。要有主卡、辅卡、数据卡和注释卡，页面才会有节奏。</p>
+        <h3>可爱里带火花</h3>
+        <p>她的角色魅力来自“天真”和“爆弹”同时存在，所以视觉上要同时保留柔和与高亮爆点。</p>
       </article>
       <article class="note-card">
-        <h3>侧栏是品牌轨道</h3>
-        <p>左边不只是导航，而是品牌定调区。移动端则折叠成顶部品牌头部继续承担这个职责。</p>
+        <h3>日常感不能丢</h3>
+        <p>除了战斗和元素属性，嘟嘟可、禁闭室、骑士团照看这些日常标签同样是可莉最重要的记忆点。</p>
       </article>
       <article class="note-card note-card-accent">
-        <h3>后续扩展不推翻首页</h3>
-        <p>图集、时间线、语音、活动页都应该接进既有结构，而不是每加一个内容就重做一套版式。</p>
+        <h3>专题站要继续长内容</h3>
+        <p>后面无论补图集、语音还是活动页，都应该继续围绕“火花骑士”这个角色印象自然扩写下去。</p>
       </article>
     </div>
   </section>

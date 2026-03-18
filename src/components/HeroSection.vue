@@ -14,33 +14,33 @@ onMounted(() => {
 <template>
   <section class="hero panel reveal" id="hero">
     <div class="hero-copy">
-      <p class="section-kicker">Original Theme Transfer</p>
-      <h1>把暖米色与红橙爆点，重构成一个真正能继续长大的 SparkLab 首页。</h1>
+      <p class="section-kicker">Mondstadt Character Special</p>
+      <h1>可莉的世界里，冒险和爆炸总是一起发生。</h1>
       <p class="hero-text">
-        这不是单纯把参考站翻版过来，而是把它的情绪保留下来，再用更清晰的实验室结构重新组织：首页负责打动人，模块负责承接内容，时间线负责展开故事。
+        她是西风骑士团的火花骑士，是蒙德城里最让人头疼也最让人喜欢的小小麻烦制造者。这里不是冷冰冰的资料页，而是一张围绕可莉展开的角色专题首页：先认识她，再走进她的语音、图集和活动记忆。
       </p>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#modules">查看模块入口</a>
-        <a class="btn btn-secondary" href="#timeline">打开实验记录</a>
+        <a class="btn btn-primary" href="#modules">查看角色资料</a>
+        <a class="btn btn-secondary" href="#timeline">打开活动记忆</a>
       </div>
 
       <div class="hero-tags" aria-label="主题关键词">
-        <span>Warm Interface</span>
-        <span>Story Entry</span>
-        <span>Launch Metrics</span>
-        <span>Playable Blocks</span>
+        <span>火花骑士</span>
+        <span>蒙德日常</span>
+        <span>嘟嘟可</span>
+        <span>爆弹冒险</span>
       </div>
     </div>
 
     <div class="hero-stage">
       <article class="feature-card feature-card-main">
-        <p class="feature-kicker">Lab Snapshot</p>
-        <h2>首屏不再只是说明，而是一个能直接带人进入主题的入口面板。</h2>
+        <p class="feature-kicker">Character Snapshot</p>
+        <h2>她不是安静站在背景里的角色，而是会主动把整个页面点燃的小太阳。</h2>
         <div class="progress-cluster">
           <div>
             <div class="progress-label-row">
-              <span>视觉完成度</span>
+              <span>角色辨识度</span>
               <strong>88%</strong>
             </div>
             <div class="progress-track">
@@ -49,7 +49,7 @@ onMounted(() => {
           </div>
           <div>
             <div class="progress-label-row">
-              <span>模块可扩展性</span>
+              <span>专题感染力</span>
               <strong>94%</strong>
             </div>
             <div class="progress-track">
@@ -62,22 +62,22 @@ onMounted(() => {
       <div class="hero-side-grid">
         <article class="feature-card feature-card-soft">
           <p class="feature-kicker">Primary Scene</p>
-          <h3>专题感首屏</h3>
-          <p>保留角色站式的情绪入口，但内容表达更原创，不再像角色资料页。</p>
+          <h3>火花骑士</h3>
+          <p>可莉的存在感来自她的笑声、爆弹、禁闭室和永远停不下来的冒险冲动。</p>
         </article>
         <article class="feature-card burst-card">
           <span class="burst-word">BOOM</span>
-          <p>Red / Orange / Beige</p>
+          <p>Pyro / Spark / Dodo</p>
         </article>
         <article class="metric-card">
-          <p class="metric-label">Launch Cards</p>
-          <strong>04</strong>
-          <span>关键内容入口</span>
+          <p class="metric-label">Element</p>
+          <strong>火</strong>
+          <span>高热度角色印象</span>
         </article>
         <article class="metric-card metric-card-accent">
-          <p class="metric-label">Story Rail</p>
-          <strong>02</strong>
-          <span>叙事层级</span>
+          <p class="metric-label">Weapon</p>
+          <strong>法器</strong>
+          <span>轻快又危险</span>
         </article>
       </div>
     </div>
