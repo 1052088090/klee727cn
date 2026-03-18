@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWEN SparkLab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+
+    <div class="layout">
+      <aside class="rail">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="eyebrow">Playful Build System</p>
+          <h1>AWEN SparkLab</h1>
+          <p class="brand-copy">
+            把灵感、任务和内容组装成一套带火花感的展示型项目。
+          </p>
+        </div>
+
+        <nav class="nav">
+          <a href="#hero">首页</a>
+          <a href="#modules">模块</a>
+          <a href="#board">任务板</a>
+          <a href="#notes">实验记录</a>
+        </nav>
+
+        <div class="rail-card">
+          <p class="rail-label">今日燃点</p>
+          <strong id="spark-value">87%</strong>
+          <p class="rail-text">灵感稳定，适合发布新页面、活动页或角色专题站。</p>
+        </div>
+
+        <div class="rail-card rail-card-soft">
+          <p class="rail-label">主题关键字</p>
+          <ul>
+            <li>米色底</li>
+            <li>爆弹红橙</li>
+            <li>玩具质感</li>
+            <li>轻冒险叙事</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="canvas">
+        <section class="hero panel" id="hero">
+          <div class="hero-copy">
+            <p class="section-kicker">Theme Transfer / Original Project</p>
+            <h2>把 `klee727.top` 的暖色爆点，转成一个新的项目首页。</h2>
+            <p class="hero-text">
+              这个原型没有复刻原站内容，而是抽取它的视觉语言：奶油色背景、爆裂红橙强调、浅金边框、棕色阴影和玩具化模块感。
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#modules">查看模块</a>
+              <a class="btn btn-secondary" href="#notes">打开记录</a>
+            </div>
+          </div>
+
+          <div class="hero-display">
+            <div class="badge-row">
+              <span>Warm UI</span>
+              <span>Story Blocks</span>
+              <span>Explosive Accent</span>
+            </div>
+
+            <div class="showcase-card">
+              <div class="showcase-top">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-orange"></span>
+                <span class="dot dot-gold"></span>
+              </div>
+              <div class="showcase-grid">
+                <article>
+                  <p class="mini-label">Core Palette</p>
+                  <h3>Red / Orange / Beige</h3>
+                </article>
+                <article>
+                  <p class="mini-label">Motion</p>
+                  <h3>Soft Sparks & Drift</h3>
+                </article>
+                <article>
+                  <p class="mini-label">Tone</p>
+                  <h3>Playful, warm, handmade</h3>
+                </article>
+                <article class="burst">
+                  <span>BOOM</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="modules panel" id="modules">
+          <div class="panel-heading">
+            <p class="section-kicker">Three Modules</p>
+            <h2>适合拿去延展成别的项目的 3 个内容骨架</h2>
+          </div>
+
+          <div class="module-grid">
+            <article class="module-card">
+              <p class="module-index">01</p>
+              <h3>故事型首页</h3>
+              <p>
+                用角色感或品牌人格做开场，左侧做品牌轨道，右侧放精选内容、活动和专题。
+              </p>
+            </article>
+            <article class="module-card">
+              <p class="module-index">02</p>
+              <h3>内容陈列页</h3>
+              <p>
+                适合放语音、图库、文章、合集，统一使用米色模块、浅金边框和高亮标签。
+              </p>
+            </article>
+            <article class="module-card">
+              <p class="module-index">03</p>
+              <h3>活动型专题页</h3>
+              <p>
+                用更鲜明的红橙爆点做 CTA、倒计时、入口卡片和活动情绪渲染。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="board panel" id="board">
+          <div class="panel-heading">
+            <p class="section-kicker">Launch Board</p>
+            <h2>一套延续主题的任务板</h2>
+          </div>
+
+          <div class="board-grid">
+            <article class="task-card active">
+              <div>
+                <p class="task-tag">Now</p>
+                <h3>设计首页视觉语言</h3>
+              </div>
+              <span>进行中</span>
+            </article>
+            <article class="task-card">
+              <div>
+                <p class="task-tag">Next</p>
+                <h3>补充图集与专题卡片</h3>
+              </div>
+              <span>待开始</span>
+            </article>
+            <article class="task-card">
+              <div>
+                <p class="task-tag">Later</p>
+                <h3>接入时间线和音频组件</h3>
+              </div>
+              <span>可扩展</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="notes panel" id="notes">
+          <div class="panel-heading">
+            <p class="section-kicker">Field Notes</p>
+            <h2>从原站抽出来的设计规则</h2>
+          </div>
+
+          <div class="notes-grid">
+            <article class="note-card">
+              <h3>颜色组合</h3>
+              <p>主色用高饱和红，激活态用橙，背景与次要模块全部回到米色和白色，避免通篇高饱和。</p>
+            </article>
+            <article class="note-card">
+              <h3>组件质感</h3>
+              <p>按钮和卡片不是纯扁平，而是靠浅金边框、棕色阴影和圆角制造“玩具盒”观感。</p>
+            </article>
+            <article class="note-card">
+              <h3>内容密度</h3>
+              <p>左边稳定、右边热闹。品牌与导航固定，内容区用列表、卡片、标签和图文混排去增加可看性。</p>
+            </article>
+            <article class="note-card note-card-accent">
+              <h3>可继续扩展</h3>
+              <p>后续可以很自然地加语音播放器、表情包墙、时间线、专题活动页，而不需要推翻主题。</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
