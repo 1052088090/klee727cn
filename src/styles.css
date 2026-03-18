@@ -617,25 +617,35 @@ p {
 .gallery-frame {
   position: relative;
   min-height: 180px;
-  padding: 18px;
-  background:
-    radial-gradient(circle at 82% 18%, rgba(255, 141, 26, 0.28), transparent 18%),
-    radial-gradient(circle at 24% 70%, rgba(220, 49, 36, 0.18), transparent 22%),
-    linear-gradient(140deg, rgba(255, 244, 225, 0.95), rgba(255, 230, 196, 0.86));
+  overflow: hidden;
+  background: linear-gradient(140deg, rgba(255, 244, 225, 0.95), rgba(255, 230, 196, 0.86));
 }
 
 .gallery-card-wide .gallery-frame {
   min-height: 220px;
 }
 
-.gallery-glow {
+.gallery-image {
   position: absolute;
-  right: 22px;
-  bottom: 18px;
-  width: 108px;
-  height: 108px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 141, 26, 0.32), transparent 72%);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(46, 31, 23, 0.08), rgba(46, 31, 23, 0.24)),
+    linear-gradient(0deg, rgba(220, 49, 36, 0.12), rgba(255, 141, 26, 0.08));
+}
+
+.gallery-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
 }
 
 .gallery-copy,
