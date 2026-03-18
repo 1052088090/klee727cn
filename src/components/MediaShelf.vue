@@ -3,18 +3,21 @@ const mediaCards = [
   {
     title: '图集精选 · Spark Gallery',
     tag: 'Gallery',
+    href: '#gallery',
     copy: '收纳可莉的角色立绘、活动插图、夏日场景和轻松冒险气氛，让整站随时都能往图集页扩展。',
     meta: ['角色立绘', '夏日活动', '暖色画面'],
   },
   {
     title: '语音精选 · Voice Capsule',
     tag: 'Audio',
+    href: '#voice',
     copy: '把可莉最有代表性的台词、招呼、冒险语气和嘟嘟可相关短句放进一个更轻松的语音入口里。',
     meta: ['角色台词', '轻快语气', '播放器入口'],
   },
   {
     title: '活动记忆 · Event Relay',
     tag: 'Event',
+    href: '#timeline',
     copy: '围绕可莉出现过的重要活动与节日记忆做专题卡，既能承接剧情回忆，也能维持整个页面的热闹感。',
     meta: ['海岛记忆', '活动节点', '专题延展'],
   },
@@ -37,7 +40,7 @@ const mediaCards = [
       <article v-for="card in mediaCards" :key="card.title" class="warehouse-card">
         <div class="warehouse-top">
           <span class="warehouse-tag">{{ card.tag }}</span>
-          <button class="warehouse-link" type="button">Open</button>
+          <a class="warehouse-link" :href="card.href">Open</a>
         </div>
         <h3>{{ card.title }}</h3>
         <p>{{ card.copy }}</p>
