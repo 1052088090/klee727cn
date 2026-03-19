@@ -26,6 +26,7 @@ body {
   min-height: 100vh;
   font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
   color: var(--text);
+  text-rendering: optimizeLegibility;
   background:
     radial-gradient(circle at 12% 10%, rgba(255, 190, 88, 0.32), transparent 22%),
     radial-gradient(circle at 82% 11%, rgba(220, 49, 36, 0.2), transparent 20%),
@@ -276,6 +277,13 @@ p {
   background: rgba(255, 248, 233, 1);
   color: var(--orange);
   box-shadow: 0 12px 24px rgba(122, 72, 38, 0.12);
+}
+
+.nav a:focus-visible,
+.btn:focus-visible,
+.warehouse-link:focus-visible {
+  outline: 3px solid rgba(255, 141, 26, 0.34);
+  outline-offset: 3px;
 }
 
 .rail-card {
@@ -912,10 +920,19 @@ p {
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
 .gallery-card {
   overflow: hidden;
+}
+
+.gallery-card:hover,
+.voice-card:hover,
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 54px rgba(122, 72, 38, 0.16);
+  border-color: rgba(220, 49, 36, 0.22);
 }
 
 .gallery-card-wide {
@@ -1279,6 +1296,10 @@ p {
     padding-bottom: 0;
   }
 
+  .canvas {
+    padding-top: 12px;
+  }
+
   .hero-side-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1321,8 +1342,22 @@ p {
   .panel,
   .rail-shell,
   .rail-card,
-  .warehouse-card {
+  .warehouse-card,
+  .gallery-card,
+  .voice-card,
+  .timeline-content,
+  .module-card,
+  .note-card,
+  .task-card,
+  .feature-card,
+  .metric-card {
     border-radius: 24px;
+  }
+
+  .panel,
+  .rail-shell,
+  .rail-card {
+    padding: 20px 18px;
   }
 
   .hero,
@@ -1339,6 +1374,26 @@ p {
     grid-column: auto;
   }
 
+  .nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    margin: 0 -2px;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    min-height: 46px;
+    padding: 0 14px;
+    white-space: nowrap;
+  }
+
   .panel-heading {
     flex-direction: column;
     align-items: start;
@@ -1350,6 +1405,7 @@ p {
   }
 
   .hero-portrait-stage {
+    order: -1;
     min-height: 240px;
   }
 
@@ -1359,8 +1415,24 @@ p {
     transform: translateX(50%);
   }
 
+  .hero-portrait-image {
+    width: min(100%, 300px);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .gallery-frame,
+  .gallery-card-wide .gallery-frame,
+  .timeline-cover {
+    min-height: 200px;
+  }
+
   .timeline-content-rich {
     grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 14px;
   }
 
   .task-card {
@@ -1370,6 +1442,10 @@ p {
 
   .task-card span {
     min-width: 0;
+  }
+
+  .notes-closing {
+    padding: 16px 0 0;
   }
 }
 

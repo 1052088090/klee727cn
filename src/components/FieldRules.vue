@@ -1,43 +1,73 @@
+<script setup>
+const sectionKicker = '\u53ef\u8389\u5370\u8c61'
+const sectionTitle =
+  '\u53ef\u8389\u4f1a\u88ab\u8bb0\u4f4f\uff0c\u4e0d\u53ea\u662f\u56e0\u4e3a\u5979\u4f1a\u7206\u70b8\u3002'
+const sectionCopy =
+  '\u771f\u6b63\u8ba9\u4eba\u5fd8\u4e0d\u6389\u5979\u7684\uff0c\u662f\u90a3\u79cd\u628a\u9ebb\u70e6\u3001\u7b11\u58f0\u3001\u5192\u9669\u548c\u67d4\u8f6f\u5fc3\u601d\u4e00\u8d77\u5e26\u8fdb\u573a\u666f\u91cc\u7684\u72ec\u7279\u6c14\u6c1b\u3002'
+const featureKicker = '\u6536\u675f\u6ce8\u811a'
+const featureTitle =
+  '\u5979\u662f\u4f1a\u628a\u6574\u4e2a\u9875\u9762\u4e00\u8d77\u70b9\u4eae\u7684\u89d2\u8272\u3002'
+const featureParagraphs = [
+  '\u53ef\u8389\u6700\u7279\u522b\u7684\u5730\u65b9\uff0c\u4ece\u6765\u4e0d\u53ea\u662f\u201c\u706b\u5143\u7d20\u89d2\u8272\u201d\u6216\u8005\u201c\u4f1a\u4e22\u7206\u5f39\u7684\u5c0f\u5973\u5b69\u201d\u3002\u5979\u771f\u6b63\u73cd\u8d35\u7684\u662f\u90a3\u79cd\u8fd1\u4e4e\u672c\u80fd\u7684\u70ed\u60c5\uff1a\u4f1a\u8ba4\u771f\u5730\u671f\u5f85\u5192\u9669\uff0c\u4f1a\u8ba4\u771f\u5730\u559c\u6b22\u561f\u561f\u53ef\uff0c\u4e5f\u4f1a\u8ba4\u771f\u5730\u628a\u6bcf\u4e00\u6b21\u60f9\u7978\u90fd\u53d8\u6210\u4e00\u6bb5\u8ba9\u4eba\u5fcd\u4e0d\u4f4f\u60f3\u539f\u8c05\u5979\u7684\u8bb0\u5fc6\u3002',
+  '\u6240\u4ee5\u8fd9\u4e2a\u4e13\u9898\u9875\u6700\u540e\u7559\u4e0b\u6765\u7684\uff0c\u4e0d\u5e94\u8be5\u53ea\u662f\u8bbe\u5b9a\u548c\u6807\u7b7e\uff0c\u800c\u662f\u4e00\u79cd\u975e\u5e38\u660e\u786e\u7684\u89d2\u8272\u611f\u53d7\uff1a\u70ed\u95f9\u3001\u53d1\u5149\u3001\u5371\u9669\u3001\u53ef\u7231\uff0c\u800c\u4e14\u59cb\u7ec8\u5e26\u7740\u4e00\u70b9\u8499\u5fb7\u590f\u5929\u4e00\u6837\u7684\u660e\u4eae\u7a7a\u6c14\u3002',
+]
+
+const noteCards = [
+  {
+    title: '\u5192\u9669\u611f',
+    copy:
+      '\u5979\u5bf9\u5916\u9762\u7684\u4e16\u754c\u59cb\u7ec8\u5e26\u7740\u6700\u76f4\u63a5\u7684\u597d\u5947\uff0c\u8fd9\u79cd\u4e0d\u52a0\u63a9\u9970\u7684\u5174\u594b\u611f\uff0c\u662f\u6574\u4e2a\u89d2\u8272\u6700\u6709\u751f\u547d\u529b\u7684\u5730\u65b9\u3002',
+  },
+  {
+    title: '\u65e5\u5e38\u611f',
+    copy:
+      '\u561f\u561f\u53ef\u3001\u7981\u95ed\u5ba4\u3001\u9a91\u58eb\u56e2\u7167\u770b\u548c\u8499\u5fb7\u8857\u9053\uff0c\u8fd9\u4e9b\u8f7b\u677e\u7684\u65e5\u5e38\u7247\u6bb5\u8ba9\u5979\u4e0d\u53ea\u662f\u6218\u6597\u89d2\u8272\uff0c\u800c\u662f\u771f\u6b63\u4f4f\u5728\u4e16\u754c\u91cc\u7684\u5c0f\u5b69\u3002',
+  },
+  {
+    title: '\u5371\u9669\u53ef\u7231',
+    copy:
+      '\u5979\u8eab\u4e0a\u6700\u8ff7\u4eba\u7684\u77db\u76fe\u611f\uff0c\u5c31\u662f\u5929\u771f\u548c\u7206\u70b8\u540c\u65f6\u6210\u7acb\u3002\u8d8a\u662f\u8fd9\u6837\uff0c\u8fd9\u4e2a\u89d2\u8272\u5c31\u8d8a\u6709\u522b\u7684\u89d2\u8272\u66ff\u4ee3\u4e0d\u4e86\u7684\u8bb0\u5fc6\u70b9\u3002',
+    accent: true,
+  },
+]
+
+const closingLine =
+  '\u53ef\u8389\u4e0d\u662f\u5b89\u9759\u9648\u5217\u5728\u8d44\u6599\u9875\u4e0a\u7684\u540d\u5b57\uff0c\u800c\u662f\u4f1a\u5e26\u7740\u706b\u82b1\u3001\u7b11\u58f0\u548c\u4e00\u70b9\u5c0f\u5c0f\u6df7\u4e71\u611f\uff0c\u4ece\u9875\u9762\u5f00\u5934\u4e00\u8def\u8dd1\u5230\u7ed3\u5c3e\u7684\u4eba\u3002'
+</script>
+
 <template>
   <section class="notes panel reveal" id="notes">
     <div class="panel-heading">
       <div>
-        <p class="section-kicker">Klee Impressions</p>
-        <h2>可莉会被记住，不只是因为她会爆炸。</h2>
+        <p class="section-kicker">{{ sectionKicker }}</p>
+        <h2>{{ sectionTitle }}</h2>
       </div>
       <p class="panel-copy">
-        真正让人忘不掉她的，是那种把麻烦、笑声、冒险和柔软心思一起带进场景里的独特气氛。
+        {{ sectionCopy }}
       </p>
     </div>
 
     <div class="notes-grid">
       <article class="note-card note-card-feature">
-        <p class="note-kicker">Closing Note</p>
-        <h3>她是会把整个页面一起点亮的角色。</h3>
-        <p>
-          可莉最特别的地方，从来不只是“火元素角色”或者“会丢爆弹的小女孩”。她真正珍贵的是那种近乎本能的热情：
-          会认真地期待冒险，会认真地喜欢嘟嘟可，也会认真地把每一次惹祸都变成一段让人忍不住想原谅她的记忆。
-        </p>
-        <p>
-          所以这个专题页最后留下来的，不应该只是设定和标签，而是一种非常明确的角色感受：热闹、发光、危险、可爱，而且始终带着一点蒙德夏天一样的明亮空气。
+        <p class="note-kicker">{{ featureKicker }}</p>
+        <h3>{{ featureTitle }}</h3>
+        <p v-for="paragraph in featureParagraphs" :key="paragraph">
+          {{ paragraph }}
         </p>
       </article>
-      <article class="note-card">
-        <h3>冒险感</h3>
-        <p>她对外面的世界始终带着最直接的好奇，这种不加掩饰的兴奋感，是整个角色最有生命力的地方。</p>
-      </article>
-      <article class="note-card">
-        <h3>日常感</h3>
-        <p>嘟嘟可、禁闭室、骑士团照看和蒙德街道，这些轻松的日常片段让她不只是战斗角色，而是真正住在世界里的小孩。</p>
-      </article>
-      <article class="note-card note-card-accent">
-        <h3>危险可爱</h3>
-        <p>她身上最迷人的矛盾感，就是天真和爆炸同时成立。越是这样，这个角色就越有别的角色替代不了的记忆点。</p>
+      <article
+        v-for="card in noteCards"
+        :key="card.title"
+        class="note-card"
+        :class="{ 'note-card-accent': card.accent }"
+      >
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.copy }}</p>
       </article>
     </div>
 
     <p class="notes-closing">
-      可莉不是安静陈列在资料页上的名字，而是会带着火花、笑声和一点小小混乱感，从页面开头一路跑到结尾的人。
+      {{ closingLine }}
     </p>
   </section>
 </template>
