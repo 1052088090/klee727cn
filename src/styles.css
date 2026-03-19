@@ -411,6 +411,93 @@ p {
   line-height: 1.08;
 }
 
+.hero-portrait-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(250px, 0.84fr);
+  gap: 12px;
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.hero-portrait-copy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: start;
+}
+
+.hero-portrait-copy p {
+  max-width: 48ch;
+}
+
+.hero-portrait-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 6px 0 6px;
+}
+
+.hero-portrait-badges span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 248, 232, 0.92);
+  color: var(--brown);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.hero-portrait-stage {
+  position: relative;
+  min-height: 320px;
+}
+
+.hero-portrait-halo {
+  position: absolute;
+  inset: 16px 0 0 28px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(255, 213, 102, 0.68) 0%, rgba(255, 141, 26, 0.42) 36%, rgba(220, 49, 36, 0.12) 64%, transparent 78%);
+  filter: blur(10px);
+}
+
+.hero-portrait-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(216, 195, 157, 0.8);
+}
+
+.hero-portrait-ring-a {
+  width: 240px;
+  height: 240px;
+  right: 18px;
+  top: 30px;
+  border-style: dashed;
+  opacity: 0.72;
+}
+
+.hero-portrait-ring-b {
+  width: 290px;
+  height: 290px;
+  right: -8px;
+  top: 4px;
+  opacity: 0.5;
+}
+
+.hero-portrait-image {
+  position: absolute;
+  right: -18px;
+  bottom: -6px;
+  width: min(100%, 360px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 34px rgba(122, 72, 38, 0.24));
+}
+
 .progress-cluster {
   display: grid;
   gap: 14px;
@@ -956,6 +1043,22 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .hero-portrait-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-portrait-stage {
+    min-height: 280px;
+  }
+
+  .hero-portrait-image {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
   .module-card-wide {
     grid-column: auto;
   }
@@ -1004,6 +1107,16 @@ p {
   .panel-heading h2,
   .hero h1 {
     max-width: none;
+  }
+
+  .hero-portrait-stage {
+    min-height: 240px;
+  }
+
+  .hero-portrait-ring-a,
+  .hero-portrait-ring-b {
+    right: 50%;
+    transform: translateX(50%);
   }
 
   .timeline-content-rich {
