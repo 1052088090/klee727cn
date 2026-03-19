@@ -141,7 +141,8 @@ p {
 .module-index,
 .task-tag,
 .metric-label,
-.timeline-date {
+.timeline-date,
+.note-kicker {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -546,6 +547,22 @@ p {
   background: rgba(255, 255, 255, 0.78);
 }
 
+.note-card-feature {
+  grid-column: span 2;
+  background:
+    radial-gradient(circle at top right, rgba(255, 141, 26, 0.18), transparent 24%),
+    linear-gradient(145deg, rgba(220, 49, 36, 0.08), rgba(255, 255, 255, 0.9));
+}
+
+.notes-closing {
+  margin: 18px 0 0;
+  padding: 18px 22px 0;
+  border-top: 1px solid rgba(216, 195, 157, 0.8);
+  color: var(--brown);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
 .module-card::after,
 .note-card::after,
 .warehouse-card::after {
@@ -852,6 +869,10 @@ p {
   }
 
   .module-card-wide {
+    grid-column: auto;
+  }
+
+  .note-card-feature {
     grid-column: auto;
   }
 }
