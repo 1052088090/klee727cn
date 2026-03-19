@@ -3,32 +3,38 @@ const voiceCards = [
   {
     scene: '问候',
     title: '一开口就带着火花感',
-    copy: '可莉的语气总是比页面先亮起来，轻快、直接，还带着一点完全藏不住的兴奋感。',
+    copy: '角色报到时的招呼语气，最能直接听出可莉那种轻快、直接、完全藏不住兴奋的状态。',
+    audio: '/audio/klee/hello.ogg',
   },
   {
     scene: '冒险',
     title: '总想往更远的地方跑',
-    copy: '她的台词里永远有“出去玩”“出去冒险”的冲动，这也是可莉最讨喜的角色驱动力之一。',
+    copy: '这一条最适合放在冒险印象里，整句都带着“马上出门”“马上去玩”的冲动感。',
+    audio: '/audio/klee/adventures.ogg',
   },
   {
     scene: '嘟嘟可',
     title: '最稳定的情绪锚点',
     copy: '只要提到嘟嘟可，整个角色的童趣、依赖感和小小世界观就会立刻完整起来。',
+    audio: '/audio/klee/dodoco.ogg',
   },
   {
     scene: '骑士团',
     title: '被照看，也被头疼',
-    copy: '她和骑士团成员之间的关系，总能把“麻烦制造者”和“被宠着的小孩”这两层同时展现出来。',
+    copy: '和琴相关的语音最能把“有点害怕、但又很依赖”的那层关系清楚地表现出来。',
+    audio: '/audio/klee/about-jean.ogg',
   },
   {
-    scene: '战斗',
-    title: '可爱外表下的高热度',
-    copy: '哪怕只是战斗语气，也能听出那种把爆弹当玩具、把危险当冒险的独特角色节奏。',
+    scene: '早安',
+    title: '一醒来就想去玩',
+    copy: '这条非常适合放在首页试听，轻松、明亮，而且几乎是可莉日常状态的浓缩版。',
+    audio: '/audio/klee/good-morning.ogg',
   },
   {
     scene: '晚安',
     title: '热闹之后仍然柔软',
-    copy: '可莉的角色魅力不只在热闹时刻，也在那些能让人感到天真和安心的收束瞬间。',
+    copy: '夜晚语音能把热闹收住，留下那种很小很软、需要被带回家的角色尾音。',
+    audio: '/audio/klee/good-night.ogg',
   },
 ]
 </script>
@@ -53,6 +59,9 @@ const voiceCards = [
         </div>
         <h3>{{ card.title }}</h3>
         <p>{{ card.copy }}</p>
+        <audio class="voice-audio" :src="card.audio" controls preload="none">
+          你的浏览器暂不支持音频播放。
+        </audio>
         <div class="voice-wave" aria-hidden="true">
           <span></span>
           <span></span>

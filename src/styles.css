@@ -701,6 +701,12 @@ p {
   margin-bottom: 14px;
 }
 
+.voice-audio {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 14px;
+}
+
 .voice-wave {
   display: flex;
   align-items: end;
