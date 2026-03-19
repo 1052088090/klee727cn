@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 
 const sectionKicker = 'Mondstadt Character Special'
 const heroTitle =
@@ -52,10 +52,39 @@ const progressItems = [
   },
 ]
 const progressWidths = ref(progressItems.map(() => 0))
+const motionReady = ref(false)
+const motionEnabled = ref(true)
+const portraitShiftX = ref(0)
+const portraitShiftY = ref(0)
+const portraitCardStyle = computed(() => ({
+  '--portrait-shift-x': `${portraitShiftX.value}px`,
+  '--portrait-shift-y': `${portraitShiftY.value}px`,
+}))
+
+function handlePointerMove(event) {
+  if (!motionEnabled.value || event.pointerType === 'touch') return
+
+  const bounds = event.currentTarget.getBoundingClientRect()
+  const ratioX = (event.clientX - bounds.left) / bounds.width - 0.5
+  const ratioY = (event.clientY - bounds.top) / bounds.height - 0.5
+
+  portraitShiftX.value = ratioX * 18
+  portraitShiftY.value = ratioY * 14
+}
+
+function resetPointerShift() {
+  portraitShiftX.value = 0
+  portraitShiftY.value = 0
+}
 
 onMounted(() => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const coarsePointer = window.matchMedia('(pointer: coarse)').matches
+  motionEnabled.value = !reducedMotion && !coarsePointer
+
   requestAnimationFrame(() => {
     progressWidths.value = progressItems.map((item) => item.value)
+    motionReady.value = true
   })
 })
 </script>
@@ -80,7 +109,13 @@ onMounted(() => {
     </div>
 
     <div class="hero-stage">
-      <article class="feature-card feature-card-main hero-portrait-card">
+      <article
+        class="feature-card feature-card-main hero-portrait-card"
+        :class="{ 'hero-portrait-ready': motionReady, 'hero-portrait-static': !motionEnabled }"
+        :style="portraitCardStyle"
+        @pointermove="handlePointerMove"
+        @pointerleave="resetPointerShift"
+      >
         <div class="hero-portrait-copy">
           <p class="feature-kicker">Character Snapshot</p>
           <h2>{{ snapshotTitle }}</h2>
