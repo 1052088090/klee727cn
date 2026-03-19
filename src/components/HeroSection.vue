@@ -1,7 +1,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 
-const sectionKicker = 'Mondstadt Character Special'
+const sectionKicker = '\u8499\u5fb7\u89d2\u8272\u4e13\u9898'
 const heroTitle =
   '\u53ef\u8389\u7684\u4e16\u754c\u91cc\uff0c\u5192\u9669\u548c\u7206\u70b8\u603b\u662f\u4e00\u8d77\u53d1\u751f\u3002'
 const heroCopy =
@@ -30,12 +30,12 @@ const primarySceneCopy =
   '\u53ef\u8389\u7684\u5b58\u5728\u611f\u6765\u81ea\u5979\u7684\u7b11\u58f0\u3001\u7206\u5f39\u3001\u7981\u95ed\u5ba4\u548c\u6c38\u8fdc\u505c\u4e0d\u4e0b\u6765\u7684\u5192\u9669\u51b2\u52a8\u3002'
 const metricCards = [
   {
-    label: 'Element',
+    label: '\u5143\u7d20',
     value: '\u706b',
     copy: '\u9ad8\u70ed\u5ea6\u89d2\u8272\u5370\u8c61',
   },
   {
-    label: 'Weapon',
+    label: '\u6b66\u5668',
     value: '\u6cd5\u5668',
     copy: '\u8f7b\u5feb\u53c8\u5371\u9669',
     accent: true,
@@ -117,7 +117,7 @@ onMounted(() => {
         @pointerleave="resetPointerShift"
       >
         <div class="hero-portrait-copy">
-          <p class="feature-kicker">Character Snapshot</p>
+          <p class="feature-kicker">\u89d2\u8272\u5feb\u7167</p>
           <h2>{{ snapshotTitle }}</h2>
           <p>{{ snapshotCopy }}</p>
           <div class="hero-portrait-badges">
@@ -152,13 +152,13 @@ onMounted(() => {
 
       <div class="hero-side-grid">
         <article class="feature-card feature-card-soft">
-          <p class="feature-kicker">Primary Scene</p>
+          <p class="feature-kicker">\u4e3b\u9898\u5370\u8c61</p>
           <h3>{{ primarySceneTitle }}</h3>
           <p>{{ primarySceneCopy }}</p>
         </article>
         <article class="feature-card burst-card">
           <span class="burst-word">BOOM</span>
-          <p>Pyro / Spark / Dodo</p>
+          <p>\u706b\u82b1 / \u7206\u5f39 / \u561f\u561f\u53ef</p>
         </article>
         <article
           v-for="card in metricCards"
