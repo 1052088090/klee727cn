@@ -1,62 +1,83 @@
 <script setup>
+const sectionKicker = 'Spark Gallery'
+const sectionTitle = '\u56fe\u96c6\u7cbe\u9009\u5148\u505a\u6210\u4e00\u9762\u80fd\u7ee7\u7eed\u5f80\u4e0b\u957f\u7684\u53ef\u8389\u89c6\u89c9\u6863\u6848\u5899\u3002'
+const sectionCopy =
+  '\u8fd9\u91cc\u4e0d\u53ea\u662f\u6446\u56fe\uff0c\u800c\u662f\u628a\u89d2\u8272\u58c1\u7eb8\u3001\u590f\u65e5\u6d3b\u52a8\u3001\u5468\u5e74\u7eaa\u5ff5\u548c\u7206\u5f39\u4e3b\u9898\u6574\u7406\u6210\u4e00\u4e2a\u53ef\u6269\u5c55\u7684\u56fe\u96c6\u5165\u53e3\u3002'
+
 const galleryCards = [
   {
-    title: '火花骑士立绘墙',
+    title: '\u706b\u82b1\u9a91\u58eb\u7acb\u7ed8\u5899',
     label: 'Portrait',
     copy:
-      '先用最亮眼的角色壁纸把可莉的识别度立住，让首屏之外的图集区也继续保留那种一眼就能认出来的暖色冲击。',
-    tags: ['角色立绘', '红橙主调', '主题海报'],
+      '\u5148\u7528\u6700\u4eae\u773c\u7684\u89d2\u8272\u58c1\u7eb8\u628a\u53ef\u8389\u7684\u8bc6\u522b\u5ea6\u7acb\u4f4f\uff0c\u8ba9\u9996\u5c4f\u4e4b\u5916\u7684\u56fe\u96c6\u533a\u4e5f\u7ee7\u7eed\u4fdd\u7559\u90a3\u79cd\u4e00\u773c\u5c31\u80fd\u8ba4\u51fa\u6765\u7684\u6696\u8272\u51b2\u51fb\u3002',
+    tags: [
+      '\u89d2\u8272\u7acb\u7ed8',
+      '\u7ea2\u6a59\u4e3b\u8c03',
+      '\u4e3b\u9898\u6d77\u62a5',
+    ],
     variant: 'wide',
     image: '/images/klee/events/version-3.8-klee-wallpaper.webp',
-    alt: '可莉 Version 3.8 官方壁纸',
+    alt: '\u53ef\u8389 Version 3.8 \u5b98\u65b9\u58c1\u7eb8',
   },
   {
-    title: '夏日群像画面',
+    title: '\u590f\u65e5\u7fa4\u50cf\u753b\u9762',
     label: 'Summer',
     copy:
-      '把夏日活动里最轻快的颜色、舞台感和节庆气味收进同一组画面里，图集区自然就会变成整站最热闹的一层。',
-    tags: ['夏日活动', '群像氛围'],
-    image:
-      'https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Blossoming_Starlight_Showcase_1.png/revision/latest?cb=20230624222422',
-    alt: '可莉夏日活动展示图',
+      '\u628a\u590f\u65e5\u6d3b\u52a8\u91cc\u6700\u8f7b\u5feb\u7684\u989c\u8272\u3001\u821e\u53f0\u611f\u548c\u8282\u5e86\u6c14\u5473\u6536\u8fdb\u540c\u4e00\u7ec4\u753b\u9762\u91cc\uff0c\u56fe\u96c6\u533a\u81ea\u7136\u5c31\u4f1a\u53d8\u6210\u6574\u7ad9\u6700\u70ed\u95f9\u7684\u4e00\u5c42\u3002',
+    tags: [
+      '\u590f\u65e5\u6d3b\u52a8',
+      '\u7fa4\u50cf\u6c1b\u56f4',
+    ],
+    image: '/images/klee/gallery/blossoming-starlight-showcase-1.webp',
+    alt: '\u53ef\u8389\u590f\u65e5\u6d3b\u52a8\u5c55\u793a\u56fe',
   },
   {
-    title: '嘟嘟可主题收藏',
+    title: '\u561f\u561f\u53ef\u4e3b\u9898\u6536\u85cf',
     label: 'Dodo',
     copy:
-      '嘟嘟可、背包和小道具会把可莉的日常感拉得更近，让图集不只剩下战斗和活动，也能保留她更可爱的那一面。',
-    tags: ['嘟嘟可', '周边感'],
-    image:
-      'https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Blossoming_Starlight_Showcase_2.png/revision/latest?cb=20230624222425',
-    alt: '可莉与嘟嘟可主题展示图',
+      '\u561f\u561f\u53ef\u3001\u80cc\u5305\u548c\u5c0f\u9053\u5177\u4f1a\u628a\u53ef\u8389\u7684\u65e5\u5e38\u611f\u62c9\u5f97\u66f4\u8fd1\uff0c\u8ba9\u56fe\u96c6\u4e0d\u53ea\u5269\u4e0b\u6218\u6597\u548c\u6d3b\u52a8\uff0c\u4e5f\u80fd\u4fdd\u7559\u5979\u66f4\u53ef\u7231\u7684\u90a3\u4e00\u9762\u3002',
+    tags: [
+      '\u561f\u561f\u53ef',
+      '\u5468\u8fb9\u611f',
+    ],
+    image: '/images/klee/gallery/blossoming-starlight-showcase-2.webp',
+    alt: '\u53ef\u8389\u4e0e\u561f\u561f\u53ef\u4e3b\u9898\u5c55\u793a\u56fe',
   },
   {
-    title: '蒙德日常切片',
+    title: '\u8499\u5fb7\u65e5\u5e38\u5207\u7247',
     label: 'Daily',
     copy:
-      '周年和纪念壁纸里的可莉，更像是蒙德城里最醒目的亮色，把她从活动主角重新带回到熟悉的日常空气里。',
-    tags: ['蒙德气氛', '日常印象'],
+      '\u5468\u5e74\u548c\u7eaa\u5ff5\u58c1\u7eb8\u91cc\u7684\u53ef\u8389\uff0c\u66f4\u50cf\u662f\u8499\u5fb7\u57ce\u91cc\u6700\u9192\u76ee\u7684\u4eae\u8272\uff0c\u628a\u5979\u4ece\u6d3b\u52a8\u4e3b\u89d2\u91cd\u65b0\u5e26\u56de\u5230\u719f\u6089\u7684\u65e5\u5e38\u7a7a\u6c14\u91cc\u3002',
+    tags: [
+      '\u8499\u5fb7\u6c14\u6c1b',
+      '\u65e5\u5e38\u5370\u8c61',
+    ],
     image: '/images/klee/events/anniversary-wallpaper-1.webp',
-    alt: '可莉周年纪念壁纸',
+    alt: '\u53ef\u8389\u5468\u5e74\u7eaa\u5ff5\u58c1\u7eb8',
   },
   {
-    title: '火花实验手册',
+    title: '\u706b\u82b1\u5b9e\u9a8c\u624b\u518c',
     label: 'Spark',
     copy:
-      '用更活泼的构图和更高饱和度的画面，把“火花骑士”那种危险又可爱的能量一直延续到图集区底部。',
-    tags: ['火元素', '爆点视觉'],
-    image:
-      'https://static.wikia.nocookie.net/gensin-impact/images/a/a6/3rd_Anniversary_Wallpaper_8.jpg/revision/latest?cb=20231026172814',
-    alt: '可莉周年活动壁纸',
+      '\u7528\u66f4\u6d3b\u6f51\u7684\u6784\u56fe\u548c\u66f4\u9ad8\u9971\u548c\u5ea6\u7684\u753b\u9762\uff0c\u628a\u201c\u706b\u82b1\u9a91\u58eb\u201d\u90a3\u79cd\u5371\u9669\u53c8\u53ef\u7231\u7684\u80fd\u91cf\u4e00\u76f4\u5ef6\u7eed\u5230\u56fe\u96c6\u533a\u5e95\u90e8\u3002',
+    tags: [
+      '\u706b\u5143\u7d20',
+      '\u7206\u70b9\u89c6\u89c9',
+    ],
+    image: '/images/klee/gallery/third-anniversary-wallpaper-8.webp',
+    alt: '\u53ef\u8389\u5468\u5e74\u6d3b\u52a8\u58c1\u7eb8',
   },
   {
-    title: '活动封面入口',
+    title: '\u6d3b\u52a8\u5c01\u9762\u5165\u53e3',
     label: 'Event',
     copy:
-      '这一格直接承接后面的活动记忆模块，让图集和时间线之间有连续的视觉关系，而不是彼此割裂的两块内容。',
-    tags: ['活动封面', '专题延展'],
+      '\u8fd9\u4e00\u683c\u76f4\u63a5\u627f\u63a5\u540e\u9762\u7684\u6d3b\u52a8\u8bb0\u5fc6\u6a21\u5757\uff0c\u8ba9\u56fe\u96c6\u548c\u65f6\u95f4\u7ebf\u4e4b\u95f4\u6709\u8fde\u7eed\u7684\u89c6\u89c9\u5173\u7cfb\uff0c\u800c\u4e0d\u662f\u5f7c\u6b64\u5272\u88c2\u7684\u4e24\u5757\u5185\u5bb9\u3002',
+    tags: [
+      '\u6d3b\u52a8\u5c01\u9762',
+      '\u4e13\u9898\u5ef6\u5c55',
+    ],
     image: '/images/klee/events/bombonanza-klee-preview.webp',
-    alt: '可莉 Bombonanza 官方预告图',
+    alt: '\u53ef\u8389 Bombonanza \u5b98\u65b9\u9884\u544a\u56fe',
   },
 ]
 </script>
@@ -65,11 +86,11 @@ const galleryCards = [
   <section class="gallery panel reveal" id="gallery">
     <div class="panel-heading">
       <div>
-        <p class="section-kicker">Spark Gallery</p>
-        <h2>图集精选先做成一面能继续往下长的可莉视觉档案墙。</h2>
+        <p class="section-kicker">{{ sectionKicker }}</p>
+        <h2>{{ sectionTitle }}</h2>
       </div>
       <p class="panel-copy">
-        这里不只是摆图，而是把角色壁纸、夏日活动、周年纪念和爆弹主题整理成一个可扩展的图集入口。
+        {{ sectionCopy }}
       </p>
     </div>
 
