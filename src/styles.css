@@ -779,6 +779,73 @@ p {
   font-size: 1.5rem;
 }
 
+.timeline-list-rich {
+  gap: 20px;
+}
+
+.timeline-item-rich {
+  align-items: start;
+}
+
+.timeline-content-rich {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 18px;
+  padding: 16px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(255, 141, 26, 0.12), transparent 28%),
+    rgba(255, 255, 255, 0.82);
+}
+
+.timeline-cover {
+  position: relative;
+  min-height: 148px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255, 240, 214, 0.95), rgba(255, 229, 188, 0.82));
+}
+
+.timeline-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(46, 31, 23, 0.04), rgba(46, 31, 23, 0.18)),
+    linear-gradient(0deg, rgba(220, 49, 36, 0.1), rgba(255, 141, 26, 0.06));
+}
+
+.timeline-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.timeline-copy {
+  display: grid;
+  align-content: start;
+}
+
+.timeline-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.timeline-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 141, 26, 0.1);
+  color: #a65200;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .task-list {
   display: grid;
   gap: 14px;
@@ -815,6 +882,15 @@ p {
 .active-task {
   border-color: rgba(220, 49, 36, 0.32);
   background: linear-gradient(90deg, rgba(220, 49, 36, 0.08), rgba(255, 141, 26, 0.06)), rgba(255, 252, 247, 0.9);
+}
+
+.task-list-story {
+  align-content: start;
+}
+
+.task-card-story {
+  align-items: start;
+  min-height: 0;
 }
 
 .reveal {
@@ -928,6 +1004,10 @@ p {
   .panel-heading h2,
   .hero h1 {
     max-width: none;
+  }
+
+  .timeline-content-rich {
+    grid-template-columns: 1fr;
   }
 
   .task-card {
